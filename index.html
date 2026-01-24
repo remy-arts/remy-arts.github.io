@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPencil | Professional Art Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="scanlines"></div>
+    <div class="grid-bg"></div>
+    
+    <!-- Floating Navigation -->
+    <nav class="floating-nav">  
+        <div class="nav-brand">
+            <span class="glitch-text" data-text="CYBERPENCIL">CYBERPENCIL</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> HOME</a>
+            <a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> GALLERY</a>
+            <a href="search.html" class="nav-link"><i class="fas fa-search"></i> SEARCH</a>
+            <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="hero-section">
+        <!-- Auto Rotating Slideshow -->
+        <div class="slideshow-container">
+            <div class="slide active" style="background-image: url('arts/assassin.jpg');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=800');"></div>
+            <div class="slide-overlay"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="glitch-text" data-text="DIGITAL PENCIL MASTERY">DIGITAL PENCIL MASTERY</h1>
+            <p class="hero-subtitle">Where <span class="neon-text">cyberpunk aesthetics</span> meet traditional pencil art mastery</p>
+            
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <a href="gallery.html" class="neon-btn">
+                    <i class="fas fa-gem"></i>
+                    <span>EXPLORE GALLERY</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <a href="search.html" class="neon-btn">
+                    <i class="fas fa-search"></i>
+                    <span>FIND ART</span>
+                    <div class="btn-glow"></div>
+                </a>
+                <a href="contact.html" class="neon-btn">
+                    <i class="fas fa-bolt"></i>
+                    <span>COMMISSION</span>
+                    <div class="btn-glow"></div>
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">ARTWORKS</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">HAND DRAWN</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">COMMISSIONS</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>SCROLL FOR PREVIEW</p>
+        </div>
+    </main>
+
+    <!-- Featured Arts Preview -->
+    <section class="preview-section">
+        <h2 class="section-title">FEATURED <span class="neon-text">ARTS</span></h2>
+        <div class="preview-grid" id="featuredArts">
+            <!-- Dynamic content from script.js -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">CYBER<span class="neon-text">PENCIL</span></div>
+            <p>Professional pencil art in cyberpunk aesthetic</p>
+            <div class="footer-links">
+                <a href="contact.html"><i class="fab fa-discord"></i></a>
+                <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                <a href="contact.html"><i class="fab fa-artstation"></i></a>
+                <a href="contact.html"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="copyright">© 2023 CyberPencil. All art rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
