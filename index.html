@@ -13,8 +13,11 @@
     <div class="scanlines"></div>
     <div class="grid-bg"></div>
     
+    <!-- Rainbow Gradient Background -->
+    <div class="rainbow-bg"></div>
+    
     <!-- Floating Navigation -->
-    <nav class="floating-nav">  
+    <nav class="floating-nav">
         <div class="nav-brand">
             <span class="glitch-text" data-text="CYBERPENCIL">CYBERPENCIL</span>
         </div>
@@ -28,32 +31,33 @@
 
     <!-- Hero Section -->
     <main class="hero-section">
-        <!-- Auto Rotating Slideshow -->
-        <div class="slideshow-container">
-            <div class="slide active" style="background-image: url('arts/assassin.jpg');"></div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800');"></div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=800');"></div>
+        <!-- Rainbow Slideshow (Color cycle instead of images) -->
+        <div class="rainbow-slideshow">
+            <div class="color-slide active" style="background: linear-gradient(135deg, #ff0080, #00ffaa);"></div>
+            <div class="color-slide" style="background: linear-gradient(135deg, #00ffaa, #0080ff);"></div>
+            <div class="color-slide" style="background: linear-gradient(135deg, #0080ff, #ff0080);"></div>
+            <div class="color-slide" style="background: linear-gradient(135deg, #ff0080, #ffff00);"></div>
             <div class="slide-overlay"></div>
         </div>
 
         <!-- Hero Content -->
         <div class="hero-content">
-            <h1 class="glitch-text" data-text="DIGITAL PENCIL MASTERY">DIGITAL PENCIL MASTERY</h1>
-            <p class="hero-subtitle">Where <span class="neon-text">cyberpunk aesthetics</span> meet traditional pencil art mastery</p>
+            <h1 class="glitch-text" data-text="RAINBOW PENCIL MASTERY">RAINBOW PENCIL MASTERY</h1>
+            <p class="hero-subtitle">Where <span class="rainbow-text">vibrant colors</span> meet traditional pencil art mastery</p>
             
             <!-- Action Buttons -->
             <div class="button-group">
-                <a href="gallery.html" class="neon-btn">
-                    <i class="fas fa-gem"></i>
+                <a href="gallery.html" class="neon-btn rainbow-btn">
+                    <i class="fas fa-palette"></i>
                     <span>EXPLORE GALLERY</span>
                     <div class="btn-glow"></div>
                 </a>
-                <a href="search.html" class="neon-btn">
+                <a href="search.html" class="neon-btn rainbow-btn">
                     <i class="fas fa-search"></i>
                     <span>FIND ART</span>
                     <div class="btn-glow"></div>
                 </a>
-                <a href="contact.html" class="neon-btn">
+                <a href="contact.html" class="neon-btn rainbow-btn">
                     <i class="fas fa-bolt"></i>
                     <span>COMMISSION</span>
                     <div class="btn-glow"></div>
@@ -62,15 +66,15 @@
 
             <!-- Stats -->
             <div class="stats-container">
-                <div class="stat-card">
+                <div class="stat-card rainbow-card">
                     <div class="stat-number">50+</div>
                     <div class="stat-label">ARTWORKS</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card rainbow-card">
                     <div class="stat-number">100%</div>
                     <div class="stat-label">HAND DRAWN</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card rainbow-card">
                     <div class="stat-number">24/7</div>
                     <div class="stat-label">COMMISSIONS</div>
                 </div>
@@ -79,7 +83,7 @@
 
         <!-- Scroll Indicator -->
         <div class="scroll-indicator">
-            <div class="mouse">
+            <div class="mouse rainbow-wheel">
                 <div class="wheel"></div>
             </div>
             <p>SCROLL FOR PREVIEW</p>
@@ -88,22 +92,34 @@
 
     <!-- Featured Arts Preview -->
     <section class="preview-section">
-        <h2 class="section-title">FEATURED <span class="neon-text">ARTS</span></h2>
+        <h2 class="section-title">FEATURED <span class="rainbow-text">ARTS</span></h2>
         <div class="preview-grid" id="featuredArts">
             <!-- Dynamic content from script.js -->
+            <div class="color-placeholder">
+                <div class="color-box" style="background: linear-gradient(45deg, #ff0000, #ff9900);"></div>
+                <p>FIERY PORTRAIT</p>
+            </div>
+            <div class="color-placeholder">
+                <div class="color-box" style="background: linear-gradient(45deg, #00ff00, #0080ff);"></div>
+                <p>CYBER LANDSCAPE</p>
+            </div>
+            <div class="color-placeholder">
+                <div class="color-box" style="background: linear-gradient(45deg, #8000ff, #ff00ff);"></div>
+                <p>NEON DREAMS</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">CYBER<span class="neon-text">PENCIL</span></div>
-            <p>Professional pencil art in cyberpunk aesthetic</p>
+            <div class="footer-logo">CYBER<span class="rainbow-text">PENCIL</span></div>
+            <p>Vibrant pencil art in rainbow aesthetic</p>
             <div class="footer-links">
-                <a href="contact.html"><i class="fab fa-discord"></i></a>
-                <a href="contact.html"><i class="fab fa-instagram"></i></a>
-                <a href="contact.html"><i class="fab fa-artstation"></i></a>
-                <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="rainbow-icon"><i class="fab fa-discord"></i></a>
+                <a href="#" class="rainbow-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="rainbow-icon"><i class="fab fa-artstation"></i></a>
+                <a href="#" class="rainbow-icon"><i class="fab fa-twitter"></i></a>
             </div>
             <p class="copyright">© 2023 CyberPencil. All art rights reserved.</p>
         </div>
