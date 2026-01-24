@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Art | RainbowArt</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="rainbow-bg"></div>
+    
+    <nav class="floating-nav">
+        <div class="nav-brand">
+            <span class="glitch-text" data-text="RAINBOWART">RAINBOWART</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><i class="fas fa-home"></i> HOME</a>
+            <a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> GALLERY</a>
+            <a href="search.html" class="nav-link active"><i class="fas fa-search"></i> SEARCH</a>
+            <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> CONTACT</a>
+        </div>
+    </nav>
+
+    <main class="search-container">
+        <div class="search-header">
+            <h1 class="glitch-text" data-text="FIND YOUR ART">FIND YOUR ART</h1>
+            <p class="search-subtitle">Describe what you're looking for</p>
+        </div>
+
+        <div class="search-box-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" 
+                       id="searchInput" 
+                       placeholder="Example: 'dark assassin portrait' or 'colorful landscape'">
+                <button id="searchBtn" class="rainbow-btn">SEARCH</button>
+            </div>
+            <div class="search-hints">
+                <span>Try:</span>
+                <button class="hint-btn">portrait</button>
+                <button class="hint-btn">cyberpunk</button>
+                <button class="hint-btn">pencil drawing</button>
+                <button class="hint-btn">fantasy</button>
+            </div>
+        </div>
+
+        <div class="search-results">
+            <div class="results-header">
+                <h2 id="resultsTitle">Search Results</h2>
+                <div class="results-count">
+                    <span id="resultsCount">0</span> matches found
+                </div>
+            </div>
+            
+            <div class="results-grid" id="resultsGrid">
+                <!-- Results will appear here -->
+                <div class="result-card">
+                    <div class="result-image" style="background: linear-gradient(45deg, #ff0080, #00ffaa);"></div>
+                    <div class="result-info">
+                        <h3>Kazakh Modern Assassin</h3>
+                        <p class="result-tags">assassin, cyberpunk, tactical, portrait</p>
+                        <p class="result-desc">Professional pencil portrait of modern assassin with hood</p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <div class="result-image" style="background: linear-gradient(45deg, #0080ff, #8000ff);"></div>
+                    <div class="result-info">
+                        <h3>Neon City Lights</h3>
+                        <p class="result-tags">cyberpunk, city, neon, night</p>
+                        <p class="result-desc">Futuristic cityscape with glowing neon signs</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search-minus"></i>
+                <h3>No results found</h3>
+                <p>Try different keywords or browse the <a href="gallery.html">full gallery</a></p>
+            </div>
+        </div>
+
+        <div class="search-tips">
+            <h3><i class="fas fa-lightbulb"></i> Search Tips</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>Use descriptive words</h4>
+                    <p>"dark moody portrait" instead of just "portrait"</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Combine terms</h4>
+                    <p>"cyberpunk + female + warrior"</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Think about colors</h4>
+                    <p>"blue theme", "warm colors", "monochrome"</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">RAINBOW<span class="rainbow-text">ART</span></div>
+            <p>Find your perfect art piece</p>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-artstation"></i></a>
+            </div>
+            <p class="copyright">© 2023 RainbowArt Gallery</p>
+        </div>
+    </footer>
+
+    <!-- Fuse.js for search -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <script src="script.js"></script>
+    <script>
+        // Search functionality
+        const artDatabase = [
+            {
+                id: 1,
+                title: "Kazakh Modern Assassin",
+                tags: "assassin cyberpunk tactical hood portrait dark pencil",
+                description: "Professional pencil portrait of modern assassin with hood",
+                image: "linear-gradient(45deg, #ff0080, #00ffaa)"
+            },
+            {
+                id: 2,
+                title: "Neon City Lights",
+                tags: "cyberpunk city neon night landscape futuristic",
+                description: "Futuristic cityscape with glowing neon signs",
+                image: "linear-gradient(45deg, #0080ff, #8000ff)"
+            },
+            {
+                id: 3,
+                title: "Rainbow Warrior",
+                tags: "fantasy warrior colorful rainbow armor",
+                description: "Fantasy warrior with colorful rainbow armor",
+                image: "linear-gradient(45deg, #ff0000, #ffff00, #00ff00, #0080ff)"
+            },
+            {
+                id: 4,
+                title: "Cyber Samurai",
+                tags: "samurai cyberpunk japanese robot futuristic",
+                description: "Traditional samurai with cybernetic enhancements",
+                image: "linear-gradient(45deg, #00ffaa, #000000)"
+            }
+        ];
+
+        const fuse = new Fuse(artDatabase, {
+            keys: ['title', 'tags', 'description'],
+            threshold: 0.4,
+            includeScore: true
+        });
+
+        function performSearch(query) {
+            const results = fuse.search(query);
+            const resultsGrid = document.getElementById('resultsGrid');
+            const noResults = document.getElementById('noResults');
+            const resultsCount = document.getElementById('resultsCount');
+            const resultsTitle = document.getElementById('resultsTitle');
+            
+            resultsGrid.innerHTML = '';
+            
+            if (results.length === 0) {
+                noResults.style.display = 'block';
+                resultsCount.textContent = '0';
+                resultsTitle.textContent = 'No results found';
+                return;
+            }
+            
+            noResults.style.display = 'none';
+            resultsCount.textContent = results.length;
+            resultsTitle.textContent = `Results for "${query}"`;
+            
+            results.forEach(result => {
+                const item = result.item;
+                const card = document.createElement('div');
+                card.className = 'result-card';
+                card.innerHTML = `
+                    <div class="result-image" style="background: ${item.image};"></div>
+                    <div class="result-info">
+                        <h3>${item.title}</h3>
+                        <p class="result-tags">${item.tags.replace(/ /g, ', ')}</p>
+                        <p class="result-desc">${item.description}</p>
+                    </div>
+                `;
+                resultsGrid.appendChild(card);
+            });
+        }
+
+        // Event listeners
+        document.getElementById('searchBtn').addEventListener('click', () => {
+            const query = document.getElementById('searchInput').value.trim();
+            if (query) performSearch(query);
+        });
+
+        document.getElementById('searchInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const query = document.getElementById('searchInput').value.trim();
+                if (query) performSearch(query);
+            }
+        });
+
+        // Hint buttons
+        document.querySelectorAll('.hint-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.getElementById('searchInput').value = btn.textContent;
+                performSearch(btn.textContent);
+            });
+        });
+
+        // Initial search
+        performSearch('cyberpunk');
+    </script>
+</body>
+</html>
